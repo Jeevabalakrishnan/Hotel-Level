@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light shadow-sm px-3 fixed-top">
+  <div class="container-fluid">
+    <!-- Brand Name -->
+    <a routerLink="/dashboard" class="navbar-brand text-dark fs-4 fw-bold">Hotel-Level</a>
+
+    <!-- Right Side Navigation -->
+    <div class="ms-auto d-flex align-items-center">
+      <!-- Admin Dropdown -->
+      <div class="dropdown me-3">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Admin
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="me-2"></i> Your Profile</a></li>
+        </ul>
+      </div>
+
+      <!-- Logout Button -->
+      <a routerLink="/admin" class="nav-link text-dark d-flex align-items-center">
+        <i class="me-2"></i> Logout
+      </a>
+    </div>
+  </div>
+</nav>

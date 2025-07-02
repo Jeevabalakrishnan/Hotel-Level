@@ -1,0 +1,13 @@
+.card {
+  border-radius: 0.5rem;
+}
+.dashboard-container {
+  display: flex;
+  margin-top: 56px; /* Ensure space for navbar */
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 250px; /* Adjust for sidebar width */
+  padding: 20px;
+}

@@ -1,0 +1,119 @@
+<div class="booking">
+    <div class="booking-section">
+        <div *ngIf="isLoggedIn" class="container mt-4">
+            <h2 class="text-center mb-5 text-danger text-uppercase">Book Your Stay</h2>
+
+            <form [formGroup]="bookingForm" (ngSubmit)="confirmBooking()">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" formControlName="name">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" formControlName="email">
+                    </div>
+                     <div class="col-md-4">
+                        <label for="destination" class="form-label">Destination</label>
+                        <select id="destination" class="form-select" formControlName="destination">
+                            <option value="">Select your destination</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="ooty">Ooty</option>
+                            <option value="madurai">Madurai</option>
+                            <option value="theni">Theni</option>
+                            <option value="kodaikanal">Kodaikanal</option>
+                            <option value="trichy">Trichy</option>
+                            <option value="coimbatore">Coimbatore</option>
+                            <option value="thanjavur">Thanjavur</option>
+                            <option value="rameswaram">Rameswaram</option>
+                            <option value="yercaud">Yercaud</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                
+                    <div class="col-md-4">
+                        <label for="checkin" class="form-label">Check-in</label>
+                        <input type="text" id="checkin" class="form-control" formControlName="checkin">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="checkout" class="form-label">Check-out</label>
+                        <input type="text" id="checkout" class="form-control" formControlName="checkout">
+                    </div>
+                     <div class="col-md-4">
+                        <label for="adults" class="form-label">Adults</label>
+                        <select id="adults" class="form-select" formControlName="adults">
+                            <option value="">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                                     <div class="col-md-4">
+                        <label for="children" class="form-label">Children</label>
+                        <select id="children" class="form-select" formControlName="children">
+                            <option value="">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="room" class="form-label">Room Type</label>
+                        <select id="room" class="form-select" formControlName="room">
+                            <option value="">Select</option>
+                            <option value="Classic Double Room">Classic Double Room</option>
+                            <option value="Superior Ocean Front">Superior Ocean Front</option>
+                            <option value="Suite Royal Level">Suite Royal Level</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" id="price" class="form-control" formControlName="price" readonly>
+                        <!-- ✅ Make price read-only -->
+                    </div>
+
+                </div>
+
+                <div class="text-end mt-4">
+                    <button type="submit" class="btn btn-outline-danger">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer-section mt-5">
+    <div class="container">
+        <div class="row justify-content-center d-flex align-items-center">
+            <!-- Logo Section -->
+            <div class="col-12 justify-content-center d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                    <img src="assets/img/logo.png" alt="Logo" width="40" />
+                    <h3 class="fw-bold ms-2 mb-0">Level</h3>
+                </a>
+            </div>
+
+            <!-- Social Icons Section -->
+            <div class="col-12 footer-icons d-flex justify-content-center mt-3">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-twitter-x"></i>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="col-12 cpy text-center mt-4">
+                <p>Copyright © 2025 Your Company - Design: Tooplate</p>
+            </div>
+        </div>
+    </div>
+</footer>

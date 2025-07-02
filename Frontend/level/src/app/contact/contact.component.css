@@ -1,0 +1,59 @@
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.contact-heading{
+ border-top: 1px solid gainsboro;
+ padding: 20px 0;
+}
+.contact-section{
+    background-color: #F4F4F4;
+    padding: 40px 0;
+}
+.footer-section {
+  background-color: #222;
+  padding: 40px 0;
+  color: white;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: auto;
+}
+
+.footer-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-icons i:hover {
+  color: #ff6600;
+}
+
+.cpy p {
+  font-size: 14px;
+    margin-left: 30px;
+}
+
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .footer-icons i {
+    font-size: 20px;
+    margin: 5px;
+  }
+}

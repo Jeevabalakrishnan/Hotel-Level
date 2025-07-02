@@ -1,0 +1,8 @@
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 56px; /* Adjusted to fit below navbar */
+  left: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}

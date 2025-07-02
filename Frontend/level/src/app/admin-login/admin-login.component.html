@@ -1,0 +1,37 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow-lg" style="width: 100%; max-width: 370px;">
+    <h3 class="text-center mb-5">Admin Login</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control p-3"
+          formControlName="email"
+          placeholder="Email"
+          [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="password"
+          class="form-control p-3"
+          formControlName="password"
+          placeholder="Password"
+          [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+        />
+      </div>
+
+      <div class="text-center">
+        <button
+          type="submit"
+          class="btn btn-outline-primary w-50"
+          [disabled]="loading"
+        >
+          {{ loading ? 'Logging in...' : 'Login' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

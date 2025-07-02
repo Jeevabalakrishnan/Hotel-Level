@@ -1,0 +1,54 @@
+<div class="contact-heading justify-content-center">
+    <h2 class="text-center text-uppercase text-danger">Contact Form</h2>
+</div>
+<div class=" contact-section mt-3">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="row g-3">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+        </div>
+        <div class="col-md-12">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" class="form-control" formControlName="subject">
+        </div>
+        <div class="col-md-12">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-control" rows="3" formControlName="message"></textarea>
+        </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+    </form>
+</div>
+<footer class="footer-section mt-5">
+    <div class="container">
+        <div class="row justify-content-center d-flex align-items-center">
+            <!-- Logo Section -->
+            <div class="col-12 justify-content-center d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                    <img src="assets/img/logo.png" alt="Logo" width="40" />
+                    <h3 class="fw-bold ms-2 mb-0">Level</h3>
+                </a>
+            </div>
+
+            <!-- Social Icons Section -->
+            <div class="col-12 footer-icons d-flex justify-content-center mt-3">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-twitter-x"></i>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="col-12 cpy text-center mt-4">
+                <p>Copyright © 2025 Your Company - Design: Tooplate</p>
+            </div>
+        </div>
+    </div>
+</footer>

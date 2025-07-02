@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+}
+.header-bg {
+  background-image: url('/assets/img/bg-img-1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px; 
+}
+
+.booking-box {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 65%;
+}
+
+.form-control, .form-select {
+    height: 50px;
+}
+
+.input-icon {
+    position: relative;
+    padding-left: 8px;
+}
+.help{
+    text-decoration: none;
+    font-size: 15px;
+    width: 10%;
+}
+.input-icon i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #f85c70;
+}
+
+.input-icon input,
+.input-icon select {
+    padding-left: 40px;
+}
+
+.btn-check-availability {
+    background-color: #f85c70;
+    color: #fff;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-check-availability:hover {
+    background-color: #e14b60;
+}
+
+
+.help-section {
+  background-color: #ee5057;
+  padding: 60px 0 0 0;
+  text-align: center;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.help-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.help-subtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.subscribe{
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.info-section{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.subscribe:hover {
+  background-color: white;
+  color: #ee5057;
+}
+
+.down-arrow {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-top: -1px;
+}
+
+.article i{
+    color: #ee5057;
+    font-size: 60px;
+}
+.article p{
+    color: #898989;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.article a{
+    text-decoration: none;
+    color: #f85c70;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.article {
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  color: #e14b60;
+}
+
+.article:hover{
+  box-shadow: 0px 0px 7px 0px rgba(214, 214, 214, 1);
+    transform: scale(1.1);
+       transition: all 0.3s ease;
+}
+.place-section{
+padding: 80px 0;
+background-color: #F4F4F4;
+margin: 0 auto;
+}
+.place-sec{
+    width: 75%;
+    margin: 0 auto;
+}
+.book-box{
+    background-color: #fff;
+    margin-left: 5px;
+    padding: 20px;
+    width:95%;
+    text-align: center;
+}
+.book-box h3,p{
+    width: 95%;
+    margin-top: 5px;
+}
+.book-box h3{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.book-box p{
+    color: #898989;
+}
+.get-more{
+    background-color:#f85c70;
+    border: none;
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px; /* Adjust button size */
+    height: 50px; /* Adjust button size */
+    color: #e14b60;
+    background-color: #e14b60;
+}
+
+.carousel-control-prev {
+    left: -50px; /* Move to the left */
+}
+
+.carousel-control-next {
+    right: -50px; /* Move to the right */
+}
+.contact-section-bg{
+      background-image: url('/assets/img/bg-img-3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-section{
+  width: 80%;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+
+.contact-form {
+  max-width: 500px;
+  width: 80%;
+  background: white;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 5px;
+}
+.contact-form .form-control {
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.send{
+    padding: 10px;
+}
+.footer-section {
+  background-color: #222;
+  padding: 40px 0;
+  color: white;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: auto;
+}
+
+.footer-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-icons i:hover {
+  color: #ff6600;
+}
+
+.cpy p {
+  font-size: 14px;
+    margin-left: 30px;
+}
+
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .footer-icons i {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .booking-box{
+    width: 95%;
+    padding: 20px;
+  }
+  .header-bg{
+    height: auto;
+  }
+}

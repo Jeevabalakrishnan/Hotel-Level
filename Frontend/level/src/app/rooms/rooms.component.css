@@ -1,0 +1,65 @@
+.booking-heading{
+      padding: 40px 0;
+  border-top: 1px solid gainsboro;
+}
+.booking-heading h1{
+    font-size: 40px;
+    color: #ff6600;
+}
+.booking-section {
+  padding: 40px 0;
+  background-image: url(/assets/img/bg-img-2.jpg);
+  height: auto;
+  background-size: contain;
+}
+.booking-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.booking-content {
+  padding: 40px;
+}
+.booking-content p{
+    width: 70%;
+}
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+h6 span {
+  font-weight: bold;
+  color: #ff6600; /* Highlight price */
+  margin-left: 10px;
+}
+.footer-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.footer-icons i:hover {
+  color: #ff6600;
+}
+
+.cpy p {
+  font-size: 14px;
+
+}
+
+
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .booking-section .row {
+    flex-direction: column;
+  }
+  .booking-img img {
+    width: 100%;
+  }
+    .footer-icons i {
+    font-size: 20px;
+    margin: 5px;
+  }
+}

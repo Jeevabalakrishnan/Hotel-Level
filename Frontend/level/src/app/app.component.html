@@ -1,0 +1,27 @@
+<div *ngIf="!isAdminRoute"> <!-- ✅ Navbar appears only for user routes -->
+  <div class="container header-nav">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container px-4">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/img/logo.png" alt="Logo" width="60" />
+            <h3 class="fw-bold ms-2 mb-0">Level</h3>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+               <li class="nav-item"></li>  <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+              <li class="nav-item"><a class="nav-link" routerLink="/rooms" routerLinkActive="active">Rooms</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog Entries</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet> <!-- ✅ Loads corresponding content -->

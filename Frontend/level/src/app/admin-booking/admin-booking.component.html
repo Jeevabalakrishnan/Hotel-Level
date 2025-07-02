@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Bookings</h1>
+
+  <div class="d-flex justify-content-between mb-3">
+   <div >
+    <button class="btn btn-danger me-2" *ngIf="selectedRows.length" (click)="deleteSelected()">Delete Selected</button>
+  </div>
+<div >
+  <button class="btn btn-outline-success me-2" (click)="exportToExcel()"><i class="bi bi-filetype-xlsx"></i></button>
+  <button class="btn btn-outline-primary me-2" (click)="exportToCSV()"><i class="bi bi-filetype-csv"></i></button>
+  <button class="btn btn-outline-danger" (click)="exportToPDF()"><i class="bi bi-file-earmark-pdf-fill"></i></button>
+</div>
+</div>
+
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th><input type="checkbox" (change)="toggleSelectAll($event)"></th>
+        <th>Destination</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Adults</th>
+        <th>Children</th>
+        <th>Room</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of currentBookings">
+        <td><input type="checkbox" [checked]="selectedRows.includes(booking._id)" (change)="toggleSelect(booking._id)"></td>
+        <td>{{ booking.destination }}</td>
+        <td>{{ booking.checkin }}</td>
+        <td>{{ booking.checkout }}</td>
+        <td>{{ booking.adults }}</td>
+        <td>{{ booking.children }}</td>
+        <td>{{ booking.room }}</td>
+        <td>₹{{ booking.price }}</td>
+        <td>
+          <button class="btn btn-outline-primary btn-sm me-1" (click)="openModal(booking, viewBookingModal)"><i class="bi bi-eye"></i></button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteBooking(booking._id)"><i class="bi bi-trash3"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+<div class="d-flex justify-content-center">
+  <button *ngFor="let num of paginationNumbers"
+          class="btn btn-sm me-2"
+          [ngClass]="{'btn-primary': currentPage === num, 'btn-outline-primary': currentPage !== num}"
+          (click)="currentPage = num">
+    {{ num }}
+  </button>
+</div>
+
+  <!-- View Modal -->
+  <ng-template #viewBookingModal>
+    <div class="modal-header">
+      <h5 class="modal-title">Booking Detail</h5>
+      <button type="button" class="btn-close" (click)="modalService.dismissAll()"></button>
+    </div>
+    <div class="modal-body" *ngIf="viewBooking">
+      <p><strong>Destination:</strong> {{ viewBooking.destination }}</p>
+<p><strong>Check-In:</strong> {{ viewBooking.checkin }}</p>
+<p><strong>Check-Out:</strong> {{ viewBooking.checkout }}</p>
+<p><strong>Adults:</strong> {{ viewBooking.adults }}</p>
+<p><strong>Children:</strong> {{ viewBooking.children }}</p>
+<p><strong>Room:</strong> {{ viewBooking.room }}</p>
+<p><strong>Price:</strong> ₹{{ viewBooking.price }}</p>
+    </div>
+  </ng-template>
+</div>

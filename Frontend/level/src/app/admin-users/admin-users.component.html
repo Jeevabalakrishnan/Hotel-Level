@@ -1,0 +1,62 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Users</h1>
+  
+<div class="d-flex justify-content-between mb-3">
+    <div>
+              <button class="btn btn-danger" *ngIf="selectedRows.length" (click)="deleteSelected()">Delete Selected</button>
+    </div>
+    <div>
+
+          <button class="btn btn-outline-success me-2" (click)="exportToExcel()"><i class="bi bi-filetype-xlsx"></i></button>
+        <button class="btn btn-outline-primary me-2" (click)="exportToCSV()"><i class="bi bi-filetype-csv"></i></button>
+        <button class="btn btn-outline-danger" (click)="exportToPDF()"><i class="bi bi-file-earmark-pdf-fill"></i></button>
+    </div>
+</div>
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th><input type="checkbox" (change)="toggleSelectAll($event)"></th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of currentUsers">
+        <td><input type="checkbox" [checked]="selectedRows.includes(user._id)" (change)="toggleSelect(user._id)"></td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>
+          <button class="btn btn-outline-primary btn-sm me-1" (click)="openModal(user, viewUserModal)"><i class="bi bi-eye"></i></button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteUser(user._id)"><i class="bi bi-trash3"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+<div class="d-flex justify-content-center">
+  <button *ngFor="let num of paginationNumbers"
+          class="btn btn-sm me-2"
+          [ngClass]="{'btn-primary': currentPage === num, 'btn-outline-primary': currentPage !== num}"
+          (click)="currentPage = num">
+    {{ num }}
+  </button>
+</div>
+
+  <!-- View Modal -->
+  <ng-template #viewUserModal>
+    <div class="modal-header">
+      <h5 class="modal-title">User Detail</h5>
+      <button type="button" class="btn-close" (click)="modalService.dismissAll()"></button>
+    </div>
+    <div class="modal-body" *ngIf="viewUser">
+      <p><strong>Name:</strong> {{ viewUser.name }}</p>
+      <p><strong>Email:</strong> {{ viewUser.email }}</p>
+      <p><strong>Phone:</strong> {{ viewUser.phone }}</p>
+      <p><strong>Password:</strong> {{ viewUser.password }}</p>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,10 @@
+.admin-container {
+  display: flex;
+  margin-top: 56px; /* Ensure navbar space */
+}
+
+.admin-content {
+  flex-grow: 1;
+  margin-left: 250px; /* Sidebar width */
+  padding: 20px;
+}
