@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-
 }
 form{
     box-shadow: 1px 1px 5px 0px ;
@@ -17,19 +16,36 @@ background-color:#F4F4F4 ;
 }
 .footer-section {
   background-color: #222;
-  padding: 40px 0;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-section .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   color: white;
 }
 
-.navbar-brand img {
-  width: 40px;
-  height: auto;
+.footer-section .navbar-brand h3 {
+  margin: 0 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .footer-icons i {
   font-size: 24px;
-  margin: 0 10px;
   color: white;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
@@ -39,5 +55,27 @@ background-color:#F4F4F4 ;
 
 .cpy p {
   font-size: 14px;
-    margin-left: 30px;
+  margin: 20px 0 0;
+  color: #ccc;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.booking-section{
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+.booking-section{
+    width: 100%;
+  }
+  .footer-section .navbar-brand h3 {
+    font-size: 1.8rem;
+  }
+
+  .footer-icons i {
+    font-size: 28px;
+  }
+
 }

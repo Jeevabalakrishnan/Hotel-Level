@@ -40,3 +40,20 @@ form{
   font-size: 14px;
     margin-left: 30px;
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-section {
+    width: 50%;
+  }
+}
+@media (max-width: 525px) {
+  .login-section {
+    width: 90%;
+  }
+
+  .cpy p {
+    text-align: left;
+    margin-left: 30px;
+  }
+}

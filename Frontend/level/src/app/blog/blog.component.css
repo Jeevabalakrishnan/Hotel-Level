@@ -118,4 +118,8 @@
     font-size: 20px;
     margin: 5px;
   }
+  .cpy p {
+  font-size: 12px;
+    margin-left: 0;
+}
 }

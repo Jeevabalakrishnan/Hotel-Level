@@ -58,6 +58,9 @@ h6 span {
   .booking-img img {
     width: 100%;
   }
+  .booking-content p{
+    width: 95%;
+}
     .footer-icons i {
     font-size: 20px;
     margin: 5px;

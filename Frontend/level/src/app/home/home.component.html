@@ -3,82 +3,84 @@
     <div class="row m-auto header-bg">
       <div class="container d-flex justify-content-center align-items-center my-5">
         <div class="booking-box">
-<form [formGroup]="bookingForm" (ngSubmit)="checkAvailability()">
-  <div class="row mb-3">
-    <div class="col-lg-4 input-icon mb-2 ">
-      <i class="bi bi-geo-alt-fill"></i>
-      <select formControlName="destination" class="form-select ps-5">
-        <option value="">Select your destination</option>
-        <option value="chennai">Chennai</option>
-        <option value="ooty">Ooty</option>
-        <option value="madurai">Madurai</option>
-        <option value="theni">Theni</option>
-        <option value="kodaikanal">Kodaikanal</option>
-        <option value="trichy">Trichy</option>
-        <option value="coimbatore">Coimbatore</option>
-        <option value="thanjavur">Thanjavur</option>
-        <option value="rameswaram">Rameswaram</option>
-        <option value="yercaud">Yercaud</option>
-      </select>
-    </div>
-    <div class="col-lg-4 input-icon mb-2 mb-lg-0">
-      <i class="bi bi-calendar-date-fill"></i>
-      <input type="text" id="checkin" formControlName="checkin" class="form-control ps-5" placeholder="Check-in">
-    </div>
+          <form [formGroup]="bookingForm" (ngSubmit)="checkAvailability()">
+            <div class="row mb-3">
+              <div class="col-lg-4 input-icon mb-2 ">
+                <i class="bi bi-geo-alt-fill"></i>
+                <select formControlName="destination" class="form-select ps-5">
+                  <option value="">Select your destination</option>
+                  <option value="chennai">Chennai</option>
+                  <option value="ooty">Ooty</option>
+                  <option value="madurai">Madurai</option>
+                  <option value="theni">Theni</option>
+                  <option value="kodaikanal">Kodaikanal</option>
+                  <option value="trichy">Trichy</option>
+                  <option value="coimbatore">Coimbatore</option>
+                  <option value="thanjavur">Thanjavur</option>
+                  <option value="rameswaram">Rameswaram</option>
+                  <option value="yercaud">Yercaud</option>
+                </select>
+              </div>
+              <div class="col-lg-4 input-icon mb-2 mb-lg-0">
+                <i class="bi bi-calendar-date-fill"></i>
+                <input type="text" id="checkin" formControlName="checkin" class="form-control ps-5"
+                  placeholder="Check-in">
+              </div>
 
-    <div class="col-lg-4 input-icon">
-      <i class="bi bi-calendar-date"></i>
-      <input type="text" id="checkout" formControlName="checkout" class="form-control ps-5" placeholder="Check-out">
-    </div>
-  </div>
+              <div class="col-lg-4 input-icon">
+                <i class="bi bi-calendar-date"></i>
+                <input type="text" id="checkout" formControlName="checkout" class="form-control ps-5"
+                  placeholder="Check-out">
+              </div>
+            </div>
 
-  <div class="row mb-3">
-    <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
-      <i class="bi bi-person-fill "></i>
-      <select formControlName="adults" class="form-select ps-5">
-        <option value="">Adults</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
+            <div class="row mb-3">
+              <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
+                <i class="bi bi-person-fill "></i>
+                <select formControlName="adults" class="form-select ps-5">
+                  <option value="">Adults</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
 
-    <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
-      <i class="bi bi-person "></i>
-      <select formControlName="children" class="form-select ps-5">
-        <option value="">Children</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
+              <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
+                <i class="bi bi-person "></i>
+                <select formControlName="children" class="form-select ps-5">
+                  <option value="">Children</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
 
-    <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
-      <i class="bi bi-door-closed-fill "></i>
-      <select formControlName="room" class="form-select ps-5">
-        <option value="">Rooms</option>
-        <option value="Classic Double Room">Classic Double Room</option>
-        <option value="Superior Ocean Front">Superior Ocean Front</option>
-        <option value="Suite Royal Level">Suite Royal Level</option>
-      </select>
-    </div>
+              <div class="col-lg-3 input-icon mb-2 mb-lg-0 ">
+                <i class="bi bi-door-closed-fill "></i>
+                <select formControlName="room" class="form-select ps-5">
+                  <option value="">Rooms</option>
+                  <option value="Classic Double Room">Classic Double Room</option>
+                  <option value="Superior Ocean Front">Superior Ocean Front</option>
+                  <option value="Suite Royal Level">Suite Royal Level</option>
+                </select>
+              </div>
 
-    <div class="col-lg-3 ps-2">
-      <button type="submit" class="btn btn-check-availability w-100">
-        <i class="bi bi-search me-1"></i> Check Availability
-      </button>
-    </div>
-  </div>
+              <div class="col-lg-3 ps-2">
+                <button type="submit" class="btn btn-check-availability w-100">
+                  <i class="bi bi-search me-1"></i> Check Availability
+                </button>
+              </div>
+            </div>
 
-  <div class="d-flex justify-content-between">
-    <p class="small ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <button class="btn btn-link help">Need help?</button>
-  </div>
-</form>
+            <div class="d-flex justify-content-between">
+              <p class="small ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="btn btn-link help">Need help?</button>
+            </div>
+          </form>
 
         </div>
       </div>
@@ -105,7 +107,7 @@
         <div class="col-md-4 article">
           <i class="bi bi-hammer"></i>
           <h3 class="article-title">Level HTML Template by Tooplate website</h3>
-          <p>You are allowed to download, edit and use this template for your business or client websites.</p>
+          <p>You are allowed to download, edit and use this template for your  client websites.</p>
           <a href="#" class="text-uppercase ">Continue reading...</a>
         </div>
         <div class="col-md-4 article">
@@ -125,114 +127,118 @@
   </div>
 
   <div class="place-section py-5">
-  <div class="container place-sec">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators (Optional) -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      </div>
+    <div class="container place-sec">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="/assets/img/hotel-2.jpg" class="img-fluid" alt="...">
-                <h3>Classic Double Room</h3>
-                <p>With modern style and furniture, the room is equipped with 2 double beds or one king size bed, mini bar, sofa and terrace or balcony where you can enjoy the beautiful views...</p>
-                 <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="/assets/img/hotel 1.jpg" class="img-fluid" alt="...">
-                <h3>Superior Ocean Front</h3>
-                <p>Superior Ocean Front rooms come with direct views over the ocean and are equipped with 2 beds or 1 king size bed, a sofa, air conditioning, alarm clock and a safety deposit box...</p>
-                 <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="assets/img/hotel-3.jpg" class="img-fluid" alt="...">
-                <h3>Suite Royal Level</h3>
-                <p class="pt-4">Royal Level Suites are very spacious and equipped with modern furniture, feature a king size bed, a sofa, living room, whirlpool bathtub and balcony...</p>
+
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="/assets/img/hotel-2.jpg" class="img-fluid" alt="...">
+                  <h3>Classic Double Room</h3>
+                  <p>With modern style and furniture, the room is equipped with 2 double beds or one king size bed, mini
+                    bar, sofa and terrace or balcony where you can enjoy the beautiful views...</p>
                   <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="/assets/img/hotel 1.jpg" class="img-fluid" alt="...">
+                  <h3>Superior Ocean Front</h3>
+                  <p>Superior Ocean Front rooms come with direct views over the ocean and are equipped with 2 beds or 1
+                    king size bed, a sofa, air conditioning, alarm clock and a safety deposit box...</p>
+                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="assets/img/hotel-3.jpg" class="img-fluid" alt="...">
+                  <h3>Suite Royal Level</h3>
+                  <p class="pt-4">Royal Level Suites are very spacious and equipped with modern furniture, feature a
+                    king size bed, a sofa, living room, whirlpool bathtub and balcony...</p>
+                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="assets/img/hotel-2.jpg" class="img-fluid" alt="...">
+                  <h3>Classic Double Room</h3>
+                  <p>With modern style and furniture, the room is equipped with 2 double beds or one king size bed, mini
+                    bar, sofa and terrace or balcony where you can enjoy the beautiful views...</p>
+                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="/assets/img/hotel 1.jpg" class="img-fluid" alt="...">
+                  <h3>Superior Ocean Front</h3>
+                  <p>Superior Ocean Front rooms come with direct views over the ocean and are equipped with 2 beds or 1
+                    king size bed, a sofa, air conditioning, alarm clock and a safety deposit box...</p>
+                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="book-box text-center">
+                  <img src="assets/img/hotel-3.jpg" class="img-fluid" alt="...">
+                  <h3>Suite Royal Level</h3>
+                  <p class="pt-4">Royal Level Suites are very spacious and equipped with modern furniture, feature a
+                    king size bed, a sofa, living room, whirlpool bathtub and balcony...</p>
+                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="assets/img/hotel-2.jpg" class="img-fluid" alt="...">
-                <h3>Classic Double Room</h3>
-                <p>With modern style and furniture, the room is equipped with 2 double beds or one king size bed, mini bar, sofa and terrace or balcony where you can enjoy the beautiful views...</p>
-                 <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="/assets/img/hotel 1.jpg" class="img-fluid" alt="...">
-                <h3>Superior Ocean Front</h3>
-                <p>Superior Ocean Front rooms come with direct views over the ocean and are equipped with 2 beds or 1 king size bed, a sofa, air conditioning, alarm clock and a safety deposit box...</p>
-                  <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="book-box text-center">
-                <img src="assets/img/hotel-3.jpg" class="img-fluid" alt="...">
-                <h3>Suite Royal Level</h3>
-                <p class="pt-4">Royal Level Suites are very spacious and equipped with modern furniture, feature a king size bed, a sofa, living room, whirlpool bathtub and balcony...</p>
-             <button class="get-more" href="#" routerLink="/rooms">Get More Info.</button>
-              </div>
-            </div>
-          </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row footer-row justify-content-center d-flex align-items-center">
+        <!-- Logo Section -->
+        <div class="col-12 justify-content-center d-flex align-items-center">
+          <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+            <img src="assets/img/logo.png" alt="Logo" width="40" />
+            <h3 class="fw-bold ms-2 mb-0">Level</h3>
+          </a>
+        </div>
+
+        <!-- Social Icons Section -->
+        <div class="col-12 footer-icons d-flex justify-content-center mt-3">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-youtube"></i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-twitter-x"></i>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="col-12 cpy text-center mt-4">
+          <p>Copyright © 2025 Your Company - Design: Tooplate</p>
         </div>
       </div>
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
-</div>
-
-<footer class="footer-section">
-  <div class="container">
-    <div class="row justify-content-center d-flex align-items-center">
-      <!-- Logo Section -->
-      <div class="col-12 justify-content-center d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
-          <img src="assets/img/logo.png" alt="Logo" width="40" />
-          <h3 class="fw-bold ms-2 mb-0">Level</h3>
-        </a>
-      </div>
-
-      <!-- Social Icons Section -->
-      <div class="col-12 footer-icons d-flex justify-content-center mt-3">
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-twitter"></i>
-        <i class="bi bi-youtube"></i>
-        <i class="bi bi-linkedin"></i>
-        <i class="bi bi-twitter-x"></i>
-      </div>
-
-      <!-- Copyright Section -->
-      <div class="col-12 cpy text-center mt-4">
-        <p>Copyright © 2025 Your Company - Design: Tooplate</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
